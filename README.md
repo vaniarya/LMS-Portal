@@ -33,7 +33,9 @@ This project presents a Learning Management System (LMS) portal, outlining its k
   <li>Course Management:<br>Create and manage courses, enroll students, and organize course content.</li>
   <li>Assignments and Assessments:<br>Create, distribute, and grade assignments</li>
   <li>Reports and Analytics:<br>View detailed reports on student progress and course performance.</li>
-</ul> 
+</ul>
+
 
 ## Website overview
-![WhatsApp Image 2025-02-16 at 23 44 20](https://github.com/user-attachments/assets/6059bc17-0af4-403f-a004-f248ec260eeb)
+
+![WhatsApp Image 2025-02-16 at 23 50 06](https://github.com/user-attachments/assets/2fd2e7a4-b7de-43bb-a735-360e9d215a3d)
