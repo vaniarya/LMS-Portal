@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | LMS</title>
+    <link rel="stylesheet" href="style copy.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .left-section {
+            background-color: #009FE3;
+            color: white;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .left-section img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .right-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-box {
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .toggle-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .forgot-password {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #009FE3;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #009FE3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        p a {
+            text-decoration: none;
+            color: #009FE3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <img src="calendar-icon.png" alt="Calendar">
+            <h2>Timetable & Attendance</h2>
+            <p>Never miss a class! Stay informed of your upcoming classes and your attendance.</p>
+        </div>
+        <div class="right-section">
+            <div class="login-box">
+                <h2>Welcome!</h2>
+                <h3>Login to your account</h3>
+                <form id="login-form">
+                    <input type="text" id="username" placeholder="Mobile No." required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <div class="toggle-group">
+                        <label>Student</label>
+                        <input type="checkbox" id="role-toggle">
+                        <label>Teacher</label>
+                        <input type="checkbox" id="role-toggle">
+                    </div>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#" id="register">Register</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("register").addEventListener("click", function() {
+            let newUsername = prompt("Enter a username:");
+            let newPassword = prompt("Set your password:");
+            if (newUsername && newPassword) {
+                localStorage.setItem("username", newUsername);
+                localStorage.setItem("password", newPassword);
+                alert("Registration successful! Now you can log in.");
+            }
+        });
+
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let storedUsername = localStorage.getItem("username");
+            let storedPassword = localStorage.getItem("password");
+            let enteredUsername = document.getElementById("username").value;
+            let enteredPassword = document.getElementById("password").value;
+            
+            if (enteredUsername === storedUsername && enteredPassword === storedPassword) {
+                alert("Login Successful!");
+                window.location.href = "dashboard.html";
+            } else {
+                alert("Invalid Username or Password");
+            }
+        });
+    </script>
+    <script>
+    document.getElementById("signup-link").addEventListener("click", function(event) {
+        event.preventDefault();  
+        window.location.href = "signup.html"; 
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <a class="navbar-brand" href="#">Gurucool</a>
+        <div class="navbar">
+            <ul class="navbar-nav">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">goal</a>
+                </li>
+                <li>
+                    <a href="#">classes</a>
+                </li>
+                <button><a href="#">login</a></button>
+            </ul>
+        </div>
+        <div class="search">
+            <form>
+                <input type="text" placeholder="Search...">
+                <button type="submit">Go</button>
+            </form>
+        </div>
+    </nav>
+    <div class=" jumbotron" >
+        <div class=" jumbotron-inner">
+           
+            <img class="mySlides" src="gurucool.jpeg">
+            <img class="mySlides" src="Essential-Books.jpg">
+            <img class="mySlides" src="abc.jpg">
+        </div> 
+        <script>
+            // Automatic Slideshow - change image every 3 seconds
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}
+              x[myIndex-1].style.display = "block";
+              setTimeout(carousel, 3000);
+            }
+        </script>
+        
+    </div>
+    <div class="div1">
+        <h1><i><b>Features</b></i></h1>
+        <ui class="p">
+            <li><br><br>Course creation and Management:<br>Instructors can create, edit and manage tasks.<br><br></li>
+            <li>Progress tracking:<br>Provides detailed analytics on student performance and learning progress.<br><br></li>
+            <li>resource sharing:<br>Allows teachers to upload study materials, videos, and external links for students to access anytime.<br><br></li>
+        </ui>
+    </div>
+    <footer></footer> 
+    <p>Developed by: vani</p>
+</body>
+
+</html>
